@@ -1,5 +1,5 @@
 import unittest
-from main import is_even, add
+from main import is_even, add, factorial
 
 class TestCLITool(unittest.TestCase):
     def test_add(self):
