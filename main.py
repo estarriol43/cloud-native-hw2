@@ -7,6 +7,9 @@ def is_even(n):
 def add(x, y):
     return x + y
 
+def factorial(n):
+    return math.factorial(n) - 1
+
 def main():
     parser = argparse.ArgumentParser(description="python math CLI")
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -18,6 +21,9 @@ def main():
     add_parser.add_argument("x", type=int)
     add_parser.add_argument("y", type=int)
 
+    fact_parser = subparsers.add_parser("factorial", help="factorial operation")
+    fact_parser.add_argument("n", type=int)
+
     args = parser.parse_args()
 
     if args.command == "parity":
@@ -27,6 +33,9 @@ def main():
     elif args.command == "add":
         result = add(args.x, args.y)
         print(f"{args.x} + {args.y} = {result}")
+    elif args.command == "factorial":
+        result = factorial(args.n)
+        print(f"{args.n}! = {result}")
 
 if __name__ == "__main__":
     main()
