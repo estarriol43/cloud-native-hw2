@@ -1,0 +1,23 @@
+name: Feature Request
+description: Suggest a new feature or improvement
+title: "[Feature] <Brief summary of the feature>"
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to share your idea! Please fill out the sections below to help us understand your request.
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Feature Description
+      description: Please describe the feature or improvement you'd like to see.
+      placeholder: I would like this CLI tool to have __ because...
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use Case
+      description: When or why would you use this feature? Why is it important?
+      placeholder: I would use this feature when __
