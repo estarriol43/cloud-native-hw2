@@ -14,6 +14,10 @@ def main():
     parity_parser = subparsers.add_parser("parity", help="parity checking")
     parity_parser.add_argument("n", type=int)
 
+    add_parser = subparsers.add_parser("add", help="add operation")
+    add_parser.add_argument("x", type=int)
+    add_parser.add_argument("y", type=int)
+
     args = parser.parse_args()
 
     if args.command == "parity":
